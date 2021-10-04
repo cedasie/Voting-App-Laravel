@@ -37,4 +37,35 @@ class Idea extends Model
     {
         return $this->belongsTo(Category::class);
     }
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
+
+    public function getStatusClasses()
+    {
+        // $allStatuses = [
+        //     'Open' => 'bg-gray-200',
+        //     'Considering' => 'bg-purple text-white',
+        //     'In Progress' => 'bg-yellow text-white',
+        //     'Implemented' => 'bg-green text-white',
+        //     'Closed' => 'bg-red text-white',
+        // ];
+
+        // return $allStatuses[$this->status->name];
+
+        // if ($this->status->name === 'Open') {
+        //     return 'bg-gray-200';
+        // } elseif ($this->status->name === 'Considering') {
+        //     return 'bg-purple text-white';
+        // } elseif ($this->status->name === 'In Progress') {
+        //     return 'bg-yellow text-white';
+        // } elseif ($this->status->name === 'Implemented') {
+        //     return 'bg-green text-white';
+        // } elseif ($this->status->name === 'Closed') {
+        //     return 'bg-red text-white';
+        // }
+
+        // return 'bg-gray-200';
+    }
 }
