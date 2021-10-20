@@ -42,6 +42,7 @@ class Idea extends Model
         return $this->belongsTo(Status::class);
     }
 
+
     public function getStatusClasses()
     {
         // $allStatuses = [
@@ -67,5 +68,10 @@ class Idea extends Model
         // }
 
         // return 'bg-gray-200';
+    }
+
+    public function votes()
+    {
+        return $this->belongsToMany(User::class, 'votes');
     }
 }
